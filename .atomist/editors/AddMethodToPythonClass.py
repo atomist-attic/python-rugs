@@ -7,6 +7,10 @@ __all__ = ["editor"]
 def edit(project: Any, params: Dict[str, str]) -> Dict[str, str]:
     """
     Add a new method to a Python class in its given module.
+
+    Note: For now, we play dumb and simply add a method at the end of the
+    file. Next step will be to load the Python AST or, even better, rely on
+    some microgrammars to aim exactly where we want to!
     """
     eng = project.context().pathExpressionEngine()
     res = eng.evaluate(project, "//*/File()[@name='"+params['mod_name']+"']")
