@@ -20,7 +20,6 @@ toolchain.
 This Rug archive requires the followings to be installed:
 
 * [Python][python] 3.5
-* [npm][npm]
 
 Once installed, run the following commands:
 
