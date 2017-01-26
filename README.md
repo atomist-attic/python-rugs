@@ -97,6 +97,10 @@ as if it was runnable Python. As long as the code written respects the AST, that
 would be fine. Even if we import modules that don't exist in Python so that 
 those imports get mapped to a JS `require(...)` call by the transpiler.
 
+With all this said, you can already use all the features that Atomist provide
+for you like the `project` object, the `Path Expression Engine` and soon
+microgrammars. All of those make for a very powerful toolbox even if you can't
+import Python dependencies for now.
 
 ## Rugs
 
