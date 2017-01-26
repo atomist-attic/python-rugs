@@ -24,8 +24,7 @@ This Rug archive requires the followings to be installed:
 Once installed, run the following commands:
 
 ```
-$ cd .atomist
-$ pip install -r requirements.txt
+$ pip install -r .atomist/requirements.txt
 ```
 
 This will install both the Python dependencies and the JavaScript dependencies
