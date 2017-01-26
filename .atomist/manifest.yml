@@ -1,0 +1,4 @@
+group: atomist-rugs
+artifact: python-types
+version: 0.1.0
+requires: "[0.10.0,1.0.0)"
