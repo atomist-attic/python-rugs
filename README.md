@@ -49,6 +49,8 @@ This will transpile all Python editors into their EcmaScript 5 twin.
 
 Now you can use the [rug cli][cli] as usual to apply your editors.
 
+You will have to run that command every time you modify one of your Rug editors.
+
 ## Can writing Rugs in Python be done?
 
 The cuurrent archive demonstrates that it's possible to write a Rug in a 
