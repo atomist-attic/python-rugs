@@ -27,7 +27,6 @@ Once installed, run the following commands:
 ```
 $ cd .atomist
 $ pip install -r requirements.txt
-$ npm install 
 ```
 
 This will install both the Python dependencies and the JavaScript dependencies
