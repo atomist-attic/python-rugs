@@ -52,7 +52,9 @@ You will have to run that command every time you modify one of your Rug editors.
 
 ## Can writing Rugs in Python be done?
 
-The cuurrent archive demonstrates that it's possible to write a Rug in a 
+**Yes!** But there are constraints that need to be understood... :)
+
+The current archive demonstrates that it's possible to write a Rug in a 
 language that is not JVM based nor JavaScript superset.
 
 However, it also shows the limits of such an exercise. Indeed, even though you
@@ -95,8 +97,6 @@ as if it was runnable Python. As long as the code written respects the AST, that
 would be fine. Even if we import modules that don't exist in Python so that 
 those imports get mapped to a JS `require(...)` call by the transpiler.
 
-Overall, this shows that to write useful Rugs in languages outside the JVM/JS
-ecosystems isn't going to be simple.
 
 ## Rugs
 
