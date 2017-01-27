@@ -8,18 +8,14 @@ def edit(project: Any, params: Dict[str, str]) -> Dict[str, str]:
     """
     Add a new method to a Python class in its given module.
 
-    Note: For now, we play dumb and simply add a method at the end of the
-    file. Next step will be to load the Python AST or, even better, rely on
-    some microgrammars to aim exactly where we want to!
+    TODO: See why an <EOF> char is added along with the new method
     """
     eng = project.context().pathExpressionEngine()
-    res = eng.evaluate(project, "//*/File()[@name='"+params['mod_name']+"']")
-
+    res = eng.evaluate(project, "/Directory()/File()[@name='"+params['mod_name']+"' and /PythonRawFile()]/PythonRawFile()//classdef()[/NAME[@value='"+params['class_name']+"']]")
     for match in res.matches():
-        print("Modifying module => " + match.path())
-        match.append("\n    def "+params['method_name']+"(self): \n        print('hey')")
+        match.append("\n    def "+params['method_name']+"(self):\n        print('hey')\n")
 
-    return {"status":"OK", "message": ""}
+    return {"status":"OK", "message": "Method added to class"}
 
 
 editor = {

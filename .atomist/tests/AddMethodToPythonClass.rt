@@ -15,9 +15,10 @@
  */
 scenario Should add method to Python class
 
+let project_name = "myproj"
 let mod_path = "myproj/__init__.py"
 let mod_name = "__init__.py"
-let class_name = "MyClass"
+let class_name = "Dummy"
 let method_name = "hello"
 
 given
