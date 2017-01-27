@@ -132,6 +132,7 @@ myproj
   subpkg
     __init__.py
     mymod.py
+```
 
 Run it as follows:
 
