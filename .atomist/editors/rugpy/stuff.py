@@ -2,5 +2,5 @@
 
 __all__ = ["echo"]
 
-def echo(whatever -> str) -> str:
+def echo(whatever: str) -> str:
     return whatever
