@@ -64,7 +64,7 @@ function main () {
     trap "rm -f $cli_user" RETURN
 
     msg "installing Python dependencies"
-    if ! pip install -r .atomist/requirements.txt; then
+    if ! pip3 install -r .atomist/requirements.txt; then
         err "failed to install Python dependencies"
         return 1
     fi
