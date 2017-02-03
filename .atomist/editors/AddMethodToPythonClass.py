@@ -11,7 +11,7 @@ def edit(project: Any, params: Dict[str, str]) -> Dict[str, str]:
     TODO: See why an <EOF> char is added along with the new method
     """
     eng = project.context().pathExpressionEngine()
-    res = eng.evaluate(project, "/Directory()/File()[@name='"+params['mod_name']+"' and /PythonRawFile()]/PythonRawFile()//classdef()[/NAME[@value='"+params['class_name']+"']]")
+    res = eng.evaluate(project, "/Directory()/File()[@name='"+params['mod_name']+"']/PythonFile()//classdef()[/NAME[@value='"+params['class_name']+"']]")
     for match in res.matches():
         match.append("\n    def "+params['method_name']+"(self):\n        print('hey')\n")
 
