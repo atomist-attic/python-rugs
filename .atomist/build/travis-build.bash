@@ -64,7 +64,7 @@ function main () {
     trap "rm -f $cli_user" RETURN
 
     msg "installing Python dependencies"
-    if ! pip -r requirements.txt; then
+    if ! pip install -r requirements.txt; then
         err "failed to install Python dependencies"
         return 1
     fi
