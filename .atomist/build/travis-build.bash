@@ -70,7 +70,7 @@ function main () {
     fi
 
     msg "transpiling Python to JavaScript"
-    if ! py2rug.py; then
+    if ! python3 py2rug.py; then
         err "failed to transpile to JavaScript"
         return 1
     fi
