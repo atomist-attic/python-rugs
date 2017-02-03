@@ -1,4 +1,4 @@
 group: atomist-rugs
-artifact: python-types
-version: 0.2.0
+artifact: python-rugs
+version: 0.2.1
 requires: "0.11.0"
