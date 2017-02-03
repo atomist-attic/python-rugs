@@ -63,8 +63,19 @@ function main () {
     fi
     trap "rm -f $cli_user" RETURN
 
+    msg "install Python package manager"
+    if ! curl -O https://bootstrap.pypa.io/get-pip.py; then
+        err "failed to download pip"
+        return 1
+    fi
+
+    if ! python3.5 get-pip.py; then
+        err "failed to install pip"
+        return 1
+    fi
+
     msg "installing Python dependencies"
-    if ! python3 -r requirements.txt; then
+    if ! pip -r requirements.txt; then
         err "failed to install Python dependencies"
         return 1
     fi
